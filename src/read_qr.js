@@ -63,10 +63,10 @@ const QrContainer = () =>
             { !scanValue ?
                 <div style={camStyle}>
                     <QrReader
-                        value={""}
+                        facingMode={"rear"}
                         delay={300}
                         style={previewStyle}
-                        onError={setScanValue}
+                        onError={e => console.log(e)}
                         onScan={setScanValue}
                     />
                 </div>
